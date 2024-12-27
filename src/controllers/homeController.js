@@ -11,6 +11,17 @@ let getHomePage = async (req, res) => {
     }
 };
 
+let getSignUpPage = async (req, res) => {
+    return res.render("signup.ejs");
+};
+
+let postSignUpPage = async (req, res) => {
+    console.log(req.body);
+    return res.send("OK");
+}
+
 module.exports = {
     getHomePage: getHomePage,
+    getSignUpPage: getSignUpPage,
+    postSignUpPage: postSignUpPage,
 };
